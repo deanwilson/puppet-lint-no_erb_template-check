@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name        = 'puppet-lint-no_erb_template-check'
-  spec.version     = '0.1.0'
+  spec.version     = '0.1.1'
   spec.homepage    = 'https://github.com/deanwilson/puppet-lint-no_erb_template-check'
   spec.license     = 'MIT'
   spec.author      = 'Dean Wilson'
@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
     or inline_template function as an aid to migrating to epp templates.
   EOF
 
-  spec.add_dependency             'puppet-lint', '~> 1.1'
+  spec.add_dependency             'puppet-lint', '>= 1.1', '< 3.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rspec-its', '~> 1.0'
   spec.add_development_dependency 'rspec-collection_matchers', '~> 1.0'
