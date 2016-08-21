@@ -28,7 +28,12 @@ This plugin provides two new checks to `puppet-lint`.
 
     'template() function call. Use epp() instead'
 
-#### Author
+## Other puppet-lint plugins
+
+You can find a list of my `puppet-lint` plugins in the
+[unixdaemon puppet-lint-plugins](https://github.com/deanwilson/unixdaemon-puppet-lint-plugins) repo.
+
+### Author
 
 [Dean Wilson](http://www.unixdaemon.net)
 
