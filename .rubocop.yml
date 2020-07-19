@@ -1,0 +1,23 @@
+AllCops:
+  NewCops: enable
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/BlockLength:
+  Max: 30
+  ExcludedMethods: [ 'describe' ]
+
+Metrics/MethodLength:
+  Max: 30
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: 'comma'
+
+Layout/HashAlignment:
+  EnforcedColonStyle: table
+
+Metrics/AbcSize:
+  Max: 20
+
+

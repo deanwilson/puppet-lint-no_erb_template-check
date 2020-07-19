@@ -3,13 +3,13 @@ require 'spec_helper'
 describe 'no_erb_template' do
   context 'class with no template calls' do
     let(:code) do
-      <<-EOS
+      <<-TEST_CLASS
         class no_template_calls {
           file { '/tmp/foo':
             content => 'bar',
           }
         }
-      EOS
+      TEST_CLASS
     end
 
     it 'should not detect any problems' do
@@ -19,13 +19,13 @@ describe 'no_erb_template' do
 
   context 'class with an epp template call' do
     let(:code) do
-      <<-EOS
+      <<-TEST_CLASS
         class epp_call {
           file { '/tmp/foo':
             content => epp('mymodule/bar.epp'),
           }
         }
-      EOS
+      TEST_CLASS
     end
 
     it 'should not detect any problems' do
@@ -39,13 +39,13 @@ describe 'no_erb_template' do
     let(:msg) { 'template() function call. Use epp() instead' }
 
     let(:code) do
-      <<-EOS
+      <<-TEST_CLASS
         class template_call {
           file { '/tmp/foo':
             content => template('mymodule/bar.epp'),
           }
         }
-      EOS
+      TEST_CLASS
     end
 
     it 'should detect a single problem' do
@@ -61,13 +61,13 @@ describe 'no_erb_template' do
     let(:msg) { 'inline_template() function call. Use inline_epp() instead' }
 
     let(:code) do
-      <<-EOS
+      <<-TEST_CLASS
         class template_call {
           file { '/tmp/foo':
             content => inline_template('This is a rubbish template'),
           }
         }
-      EOS
+      TEST_CLASS
     end
 
     it 'should detect a single problem' do
