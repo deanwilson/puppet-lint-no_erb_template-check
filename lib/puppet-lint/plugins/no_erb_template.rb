@@ -1,8 +1,10 @@
 PuppetLint.new_check(:no_erb_template) do
   def check
-    functions = ['template', 'inline_template']
+    functions = %w[template inline_template]
 
-    tokens.select { |t| (t.type == :NAME or t.type == :FUNCTION_NAME) and functions.include? t.value }.each do |function_token|
+    function_tokens = tokens.select { |t| (t.type == :NAME or t.type == :FUNCTION_NAME) and functions.include? t.value }
+
+    function_tokens.each do |function_token|
       next unless function_token.next_code_token.type == :LPAREN
 
       key_token = function_token.next_code_token.next_code_token
