@@ -6,6 +6,7 @@ Style/FrozenStringLiteralComment:
 
 Metrics/BlockLength:
   Max: 30
+  ExcludedMethods: [ 'describe' ]
 
 Metrics/MethodLength:
   Max: 30
@@ -18,3 +19,5 @@ Layout/HashAlignment:
 
 Metrics/AbcSize:
   Max: 20
+
+
