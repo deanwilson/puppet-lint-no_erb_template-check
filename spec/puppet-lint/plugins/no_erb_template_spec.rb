@@ -12,7 +12,7 @@ describe 'no_erb_template' do
       TEST_CLASS
     end
 
-    it 'should not detect any problems' do
+    it 'does not detect any problems' do
       expect(problems).to have(0).problems
     end
   end
@@ -28,7 +28,7 @@ describe 'no_erb_template' do
       TEST_CLASS
     end
 
-    it 'should not detect any problems' do
+    it 'does not detect any problems' do
       expect(problems).to have(0).problems
     end
   end
@@ -48,11 +48,11 @@ describe 'no_erb_template' do
       TEST_CLASS
     end
 
-    it 'should detect a single problem' do
+    it 'detects a single problem' do
       expect(problems).to have(1).problem
     end
 
-    it 'should create an error' do
+    it 'creates an error' do
       expect(problems).to contain_warning(msg).on_line(3).in_column(33)
     end
   end
@@ -70,11 +70,11 @@ describe 'no_erb_template' do
       TEST_CLASS
     end
 
-    it 'should detect a single problem' do
+    it 'detects a single problem' do
       expect(problems).to have(1).problem
     end
 
-    it 'should create an error' do
+    it 'creates an error' do
       expect(problems).to contain_warning(msg).on_line(3).in_column(40)
     end
   end
