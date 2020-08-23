@@ -18,6 +18,4 @@ Layout/HashAlignment:
   EnforcedColonStyle: table
 
 Metrics/AbcSize:
-  Max: 20
-
-
+  Max: 30
