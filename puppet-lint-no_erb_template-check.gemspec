@@ -18,6 +18,8 @@ Gem::Specification.new do |spec|
     or inline_template function as an aid to migrating to epp templates.
   DESCRIPTION
 
+  spec.required_ruby_version = '>= 2.5.0'
+
   spec.add_dependency             'puppet-lint', '>= 1.1', '< 3.0'
 
   spec.add_development_dependency 'rake', '~> 13.0.0'
@@ -26,5 +28,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec-its', '~> 1.0'
   spec.add_development_dependency 'rspec-json_expectations', '~> 2.2'
   spec.add_development_dependency 'rubocop', '~> 0.89.0'
+  spec.add_development_dependency 'rubocop-rspec', '~> 1.43.0'
   spec.add_development_dependency 'simplecov', '~> 0.19.0'
 end
