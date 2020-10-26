@@ -1,5 +1,7 @@
 # puppet-lint no ERB templates check
 
+[![Actions Status](https://github.com/deanwilson/puppet-lint-no_erb_template-check/workflows/Ruby/badge.svg)](https://github.com/deanwilson/puppet-lint-no_erb_template-check/actions)
+
 As part of the migration to a cleaner, Puppet 4 enhanced, code base one
 of the suggestions is to move from the old ERB (Embedded Ruby)
 templates to the newer, kinder, gentler `epp` (Embedded Puppet
