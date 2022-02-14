@@ -9,7 +9,7 @@ Style/FrozenStringLiteralComment:
 
 Metrics/BlockLength:
   Max: 30
-  ExcludedMethods: [ 'describe' ]
+  IgnoredMethods: [ 'describe' ]
 
 Metrics/MethodLength:
   Max: 30
